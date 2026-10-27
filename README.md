@@ -5,6 +5,16 @@
 
 Pi Mobile is an Android client for the [Pi coding agent](https://github.com/badlogic/pi-mono). It gives you live session control when you’re away from your laptop.
 
+## OmO homelab setup
+
+This fork drives [OmO](https://github.com/code-yeongyu) (a pi fork) instead of pi:
+
+- The bridge defaults to `BRIDGE_PI_COMMAND=omo` and `~/.omo/agent/sessions`.
+- It runs on the homelab omo container (Proxmox CT 107, user `abutalha`) as the user service `omo-mobile-bridge`, bound to `127.0.0.1:8787`.
+- pve-01 exposes it tailnet-only through Tailscale Serve on port 8787 (`socat` + `pct exec` tunnel into the CT).
+- Pair the phone with `cd bridge && pnpm pair -- --host 100.109.173.64`.
+- The Android app installs as `com.abutalha.omomobile` ("OmO Mobile") alongside upstream pi-mobile.
+
 ## Demo (WIP)
 
 ▶️ **Streamable demo:** https://streamable.com/jngtjp *(WIP)*
