@@ -14,7 +14,7 @@ android {
     buildToolsVersion = "37.0.0"
 
     defaultConfig {
-        applicationId = "com.ayagmar.pimobile"
+        applicationId = "com.abutalha.omomobile"
         minSdk = 26
         targetSdk = 37
         versionCode = 1
