@@ -12,7 +12,7 @@ This fork drives [OmO](https://github.com/code-yeongyu) (a pi fork) instead of p
 - The bridge defaults to `BRIDGE_PI_COMMAND=omo` and `~/.omo/agent/sessions`.
 - It runs on the homelab omo container (Proxmox CT 107, user `abutalha`) as the user service `omo-mobile-bridge`, bound to `127.0.0.1:8787`.
 - pve-01 exposes it tailnet-only through Tailscale Serve on port 8787 (`socat` + `pct exec` tunnel into the CT).
-- Pair the phone with `cd bridge && pnpm pair -- --host 100.109.173.64`.
+- Pair the phone with `cd bridge && pnpm pair -- --host pve-01.tail5e240f.ts.net`. Use the MagicDNS name, not the 100.x IP: the app only permits cleartext to `*.ts.net` hosts.
 - The Android app installs as `com.abutalha.omomobile` ("OmO Mobile") alongside upstream pi-mobile.
 
 ## Demo (WIP)
