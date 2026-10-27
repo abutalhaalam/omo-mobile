@@ -16,13 +16,13 @@ describe("parseBridgeConfig", () => {
             authToken: "test-token",
             processIdleTtlMs: 300_000,
             reconnectGraceMs: 30_000,
-            sessionDirectory: path.join(os.homedir(), ".pi", "agent", "sessions"),
+            sessionDirectory: path.join(os.homedir(), ".omo", "agent", "sessions"),
             stateDirectory: path.join(os.homedir(), ".pi-mobile"),
             shareOrigin: undefined,
             enableHealthEndpoint: true,
             websocketMaxPayloadBytes: 16 * 1024 * 1024,
             importMaxBytes: 10 * 1024 * 1024,
-            piCommand: "pi",
+            piCommand: "omo",
         });
     });
 
